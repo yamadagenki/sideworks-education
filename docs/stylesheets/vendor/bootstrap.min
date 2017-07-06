@@ -2834,6 +2834,7 @@ tbody.collapse.in {
   display: table-row-group; }
 
 .collapsing {
+  margin-top: 20px;
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3421,6 +3422,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 .navbar-collapse.in {
+  margin-top: 20px;
   overflow-y: auto; }
 
 @media (min-width: 768px) {

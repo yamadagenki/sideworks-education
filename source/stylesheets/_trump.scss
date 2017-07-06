@@ -45,3 +45,10 @@ $padding-base: 5;
 .ta-r {
   text-align: right;
 }
+
+// scss-lint:disable QualifyingElement
+section[id] {
+  margin-top: -100px;
+  padding-top: 100px;
+}
+// scss-lint:enable QualifyingElement
