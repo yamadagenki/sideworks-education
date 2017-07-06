@@ -8,6 +8,8 @@
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+activate :autoprefixer
+activate :sprockets
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

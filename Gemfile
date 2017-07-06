@@ -10,6 +10,8 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem "middleman", "~> 4.1"
+gem 'middleman-sprockets'
+gem 'middleman-autoprefixer'
 # gem "middleman-blog"
 
 # gem 'redcarpet', '~> 3.3', '>= 3.3.3'
