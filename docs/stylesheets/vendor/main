@@ -10,7 +10,12 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-family: 'Roboto Condensed', sans-serif; }
+
+h3 {
+  color: #02bdd5;
+  font-size: 22px; }
 
 p {
   font-family: 'Roboto', sans-serif;
@@ -300,33 +305,33 @@ a:hover {
   font-size: 30px;
   color: #fff; }
 
-figure {
+.grid-box {
   background: #fff;
   margin-bottom: 45px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.06); }
 
-figure .img-wrapper {
+.grid-box .img-wrapper {
   position: relative;
   overflow: hidden; }
 
-figure img {
+.grid-box img {
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
   -webkit-transition: -webkit-transform 400ms;
   transition: transform 400ms; }
 
-figure:hover img {
+.grid-box:hover img {
   -webkit-transform: scale3d(1.2, 1.2, 1);
   transform: scale3d(1.2, 1.2, 1); }
 
-figure:hover .overlay {
+.grid-box:hover .overlay {
   opacity: 1; }
 
-figure:hover .overlay .buttons a {
+.grid-box:hover .overlay .buttons a {
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1); }
 
-figure .overlay {
+.grid-box .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -339,7 +344,7 @@ figure .overlay {
   -webkit-transition: opacity 400ms;
   transition: opacity 400ms; }
 
-figure .overlay a {
+.grid-box .overlay a {
   display: inline-block;
   color: #fff;
   padding: 10px 23px;
@@ -352,30 +357,30 @@ figure .overlay a {
   -webkit-transition: all 400ms;
   transition: all 400ms; }
 
-figure .overlay a:hover {
+.grid-box .overlay a:hover {
   text-decoration: none; }
 
-figure .overlay:hover a {
+.grid-box .overlay:hover a {
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1); }
 
-figure .buttons {
+.grid-box .buttons {
   position: absolute;
   top: 45%;
   left: 24%; }
 
-figure figcaption {
+.grid-box figcaption {
   padding: 20px 25px;
   margin-top: 0;
   color: #666; }
 
-figure figcaption h4 {
+.grid-box figcaption h4 {
   margin: 0; }
 
-figure figcaption h4 a {
+.grid-box figcaption h4 a {
   color: #02bdd5; }
 
-figure figcaption p {
+.grid-box figcaption p {
   font-size: 14px;
   margin-bottom: 0;
   margin-top: 5px; }
@@ -745,7 +750,7 @@ ul.social-icons li {
   color: #777;
   line-height: 1.7; }
 
-.works.service-page figure .buttons {
+.works.service-page .grid-box .buttons {
   position: absolute;
   top: 45%;
   left: 13%; }
@@ -764,7 +769,7 @@ ul.social-icons li {
 .works-fit {
   padding: 40px 0; }
 
-.works-fit figure .buttons {
+.works-fit .grid-box .buttons {
   left: 14%; }
 
 .fancybox-close {
@@ -992,7 +997,7 @@ article {
 .gallery {
   padding: 100px; }
 
-.gallery figure .buttons {
+.gallery .grid-box .buttons {
   left: 40%; }
 
 .portfolio-meta span {
