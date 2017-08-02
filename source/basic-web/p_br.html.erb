@@ -1,0 +1,30 @@
+<section style="margin-top:120px; min-height:800px;">
+  <div class="container">
+    <h2 class="mb20">ソースコード</h2>
+    <pre class="mb20"><code>
+      <%= CGI.escapeHTML('
+    <div>
+      <p>
+        パラグラフはdivの中に書き込みます.
+      </p>
+      <p>
+        改行したい場合は<br/>を挟みます．
+      </p>
+    </div>
+      ') %>
+    </code></pre>
+    <h2 class="mb20">表示</h2>
+    <div>
+      <p>
+        パラグラフはdivの中に書き込みます.
+      </p>
+      <p>
+        改行したい場合は<br/>を挟みます．
+      </p>
+    </div>
+    <div class="mt30">
+      <a href="/basic-web.html">戻る</a>
+    </div>
+  </div>
+</section>
+
