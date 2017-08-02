@@ -34,6 +34,9 @@ $padding-base: 5;
   }
 }
 
+.pl0 {
+  padding-left: 0;
+}
 .mt0 {
   margin-top: 0 !important;
 }
@@ -46,9 +49,401 @@ $padding-base: 5;
   text-align: right;
 }
 
+.fl-r {
+  float: right;
+}
+
+.fl-l {
+  float: left;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.c-white {
+  color: white;
+}
+
 // scss-lint:disable QualifyingElement
 section[id] {
   margin-top: -100px;
   padding-top: 100px;
 }
 // scss-lint:enable QualifyingElement
+
+.code-description {
+  /*
+   * The default style sheet used to render HTML.
+   *
+   * Copyright (C) 2000 Lars Knoll (knoll@kde.org)
+   * Copyright (C) 2003-2011, 2014 Apple Inc. All rights reserved.
+   *
+   * This library is free software; you can redistribute it and/or
+   * modify it under the terms of the GNU Library General Public
+   * License as published by the Free Software Foundation; either
+   * version 2 of the License, or (at your option) any later version.
+   *
+   * This library is distributed in the hope that it will be useful,
+   * but WITHOUT ANY WARRANTY; without even the implied warranty of
+   * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   * Library General Public License for more details.
+   *
+   * You should have received a copy of the GNU Library General Public License
+   * along with this library; see the file COPYING.LIB.  If not, write to
+   * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+   * Boston, MA 02110-1301, USA.
+   *
+   */
+
+  @namespace "http://www.w3.org/1999/xhtml";
+
+  html {
+    display: block;
+  }
+
+  /* children of the <head> element all have display:none */
+  head, link, meta, script, style, title {
+    display: none;
+  }
+
+  /* generic block-level elements */
+
+  body {
+    display: block;
+    margin: 8px;
+  }
+
+  p {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1__qem;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+  }
+
+  address, article, aside, div, footer, header, hgroup, layer, main, nav, section {
+    display: block;
+  }
+
+  marquee {
+    display: inline-block;
+  }
+
+  blockquote {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+  }
+
+  figcaption {
+    display: block;
+  }
+
+  figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+  }
+
+  q {
+    display: inline;
+  }
+
+  q::before {
+    content: open-quote;
+  }
+
+  q::after {
+    content: close-quote;
+  }
+
+  center {
+    display: block;
+    /* special centering to be able to emulate the html4/netscape behaviour */
+    text-align: -webkit-center;
+  }
+
+  hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+  /* heading elements */
+
+  h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67__qem;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  :matches(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+  }
+
+  :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+  }
+
+  :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: 1.00em;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+  }
+
+  :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+  }
+
+  :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+  }
+
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h4 {
+    display: block;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h5 {
+    display: block;
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h6 {
+    display: block;
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  /* tables */
+
+  table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+  }
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+  table > tr {
+    vertical-align: middle;
+  }
+
+  col {
+    display: table-column;
+  }
+
+  colgroup {
+    display: table-column-group;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  td, th {
+    display: table-cell;
+    vertical-align: inherit;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  caption {
+    display: table-caption;
+    text-align: -webkit-center;
+  }
+
+  /* lists */
+
+  ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+  }
+
+  ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  ul ul, ol ul {
+    list-style-type: circle !important;
+  }
+
+  ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+    list-style-type: square !important;
+  }
+
+  dd {
+    display: block;
+    -webkit-margin-start: 40px;
+  }
+
+  dl {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+  }
+
+  dt {
+    display: block;
+  }
+
+  ol ul, ul ol, ul ul, ol ol {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  /* form elements */
+
+  form {
+    display: block;
+    margin-top: 0__qem;
+  }
+
+  label {
+    cursor: default;
+  }
+
+  legend {
+    display: block;
+    -webkit-padding-start: 2px;
+    -webkit-padding-end: 2px;
+    border: none;
+  }
+
+  fieldset {
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    border: 2px groove ThreeDFace;
+    min-width: min-content;
+  }
+
+  button {
+    -webkit-appearance: button;
+  }
+
+  /* Form controls don't go vertical. */
+  input, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+  }
+
+  input[type="hidden"] {
+    display: none;
+  }
+
+}
