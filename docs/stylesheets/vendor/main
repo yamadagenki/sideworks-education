@@ -24,9 +24,7 @@ p {
   font-weight: 300; }
 
 ul {
-  padding-left: 0; }
-
-ul li {
+  padding-left: 0;
   list-style: none; }
 
 h2 {

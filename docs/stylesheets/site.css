@@ -9634,9 +9634,7 @@ p {
   font-weight: 300; }
 
 ul {
-  padding-left: 0; }
-
-ul li {
+  padding-left: 0;
   list-style: none; }
 
 h2 {
@@ -11422,6 +11420,9 @@ px      68    160    252    344    436    */
 .p60 {
   padding: 60px !important; }
 
+.pl0 {
+  padding-left: 0; }
+
 .mt0 {
   margin-top: 0 !important; }
 
@@ -11431,6 +11432,281 @@ px      68    160    252    344    436    */
 .ta-r {
   text-align: right; }
 
+.fl-r {
+  float: right; }
+
+.fl-l {
+  float: left; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.bg-red {
+  background: red; }
+
+.bg-blue {
+  background: blue; }
+
+.border {
+  border: 1px solid black; }
+
+.c-white {
+  color: white; }
+
 section[id] {
   margin-top: -100px;
   padding-top: 100px; }
+
+.code-description {
+  /*
+   * The default style sheet used to render HTML.
+   *
+   * Copyright (C) 2000 Lars Knoll (knoll@kde.org)
+   * Copyright (C) 2003-2011, 2014 Apple Inc. All rights reserved.
+   *
+   * This library is free software; you can redistribute it and/or
+   * modify it under the terms of the GNU Library General Public
+   * License as published by the Free Software Foundation; either
+   * version 2 of the License, or (at your option) any later version.
+   *
+   * This library is distributed in the hope that it will be useful,
+   * but WITHOUT ANY WARRANTY; without even the implied warranty of
+   * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   * Library General Public License for more details.
+   *
+   * You should have received a copy of the GNU Library General Public License
+   * along with this library; see the file COPYING.LIB.  If not, write to
+   * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+   * Boston, MA 02110-1301, USA.
+   *
+   */
+  @namespace "http://www.w3.org/1999/xhtml";
+  /* children of the <head> element all have display:none */
+  /* generic block-level elements */
+  /* heading elements */
+  /* tables */
+  /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+  /* lists */
+  /* form elements */
+  /* Form controls don't go vertical. */ }
+  .code-description html {
+    display: block; }
+  .code-description head, .code-description link, .code-description meta, .code-description script, .code-description style, .code-description title {
+    display: none; }
+  .code-description body {
+    display: block;
+    margin: 8px; }
+  .code-description p {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1__qem;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0; }
+  .code-description address, .code-description article, .code-description aside, .code-description div, .code-description footer, .code-description header, .code-description hgroup, .code-description layer, .code-description main, .code-description nav, .code-description section {
+    display: block; }
+  .code-description marquee {
+    display: inline-block; }
+  .code-description blockquote {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px; }
+  .code-description figcaption {
+    display: block; }
+  .code-description figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px; }
+  .code-description q {
+    display: inline; }
+  .code-description q::before {
+    content: open-quote; }
+  .code-description q::after {
+    content: close-quote; }
+  .code-description center {
+    display: block;
+    /* special centering to be able to emulate the html4/netscape behaviour */
+    text-align: -webkit-center; }
+  .code-description hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px; }
+  .code-description h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67__qem;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description :matches(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em; }
+  .code-description :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em; }
+  .code-description :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: 1.00em;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em; }
+  .code-description :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em; }
+  .code-description :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em; }
+  .code-description h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description h4 {
+    display: block;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description h5 {
+    display: block;
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description h6 {
+    display: block;
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold; }
+  .code-description table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray; }
+  .code-description thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .code-description tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .code-description tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .code-description table > tr {
+    vertical-align: middle; }
+  .code-description col {
+    display: table-column; }
+  .code-description colgroup {
+    display: table-column-group; }
+  .code-description tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit; }
+  .code-description td, .code-description th {
+    display: table-cell;
+    vertical-align: inherit; }
+  .code-description th {
+    font-weight: bold; }
+  .code-description caption {
+    display: table-caption;
+    text-align: -webkit-center; }
+  .code-description ul, .code-description menu, .code-description dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px; }
+  .code-description ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px; }
+  .code-description li {
+    display: list-item;
+    text-align: -webkit-match-parent; }
+  .code-description ul ul, .code-description ol ul {
+    list-style-type: circle !important; }
+  .code-description ol ol ul, .code-description ol ul ul, .code-description ul ol ul, .code-description ul ul ul {
+    list-style-type: square !important; }
+  .code-description dd {
+    display: block;
+    -webkit-margin-start: 40px; }
+  .code-description dl {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0; }
+  .code-description dt {
+    display: block; }
+  .code-description ol ul, .code-description ul ol, .code-description ul ul, .code-description ol ol {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0; }
+  .code-description form {
+    display: block;
+    margin-top: 0__qem; }
+  .code-description label {
+    cursor: default; }
+  .code-description legend {
+    display: block;
+    -webkit-padding-start: 2px;
+    -webkit-padding-end: 2px;
+    border: none; }
+  .code-description fieldset {
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    border: 2px groove ThreeDFace;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content; }
+  .code-description button {
+    -webkit-appearance: button; }
+  .code-description input, .code-description textarea, .code-description keygen, .code-description select, .code-description button, .code-description meter, .code-description progress {
+    -webkit-writing-mode: horizontal-tb !important; }
+  .code-description input[type="hidden"] {
+    display: none; }
