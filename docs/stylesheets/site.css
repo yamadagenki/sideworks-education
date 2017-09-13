@@ -9612,7 +9612,8 @@ button.close {
     background-size: 24px 24px;
     /*The size of the normal image, half the size of the hi-res image*/ } }
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  padding-top: 120px; }
 
 h1,
 h2,
@@ -9850,7 +9851,7 @@ a:hover {
   margin-right: 10px; }
 
 #about {
-  padding: 110px 0; }
+  padding: 130px 0; }
 
 #about .block {
   padding: 20px 30px 0 30px; }
@@ -11464,6 +11465,9 @@ px      68    160    252    344    436    */
 section[id] {
   margin-top: -100px;
   padding-top: 100px; }
+
+.h130 {
+  height: 130px; }
 
 .code-description {
   /*

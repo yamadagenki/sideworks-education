@@ -10,6 +10,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 activate :autoprefixer
 activate :sprockets
+set :relative_links, true
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -22,30 +23,29 @@ activate :sprockets
 # Helpers
 ###
 
-#activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
+activate :blog do |blog|
+  #This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "posts/{year}/{month}/{day}.html"
+  blog.permalink = "posts/{year}/{month}/{day}.html"
   # Matcher for blog source files
-  # blog.sources = "posts/{year}-{month}-{day}.html"
-  # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "blog"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
+  blog.sources = "posts/{year}-{month}-{day}.html"
+  blog.taglink = "tags/{tag}.html"
+  blog.summary_separator = /(READMORE)/
+  blog.summary_length = 250
+  blog.year_link = "{year}.html"
+  blog.month_link = "{year}/{month}.html"
+  blog.day_link = "{year}/{month}/{day}.html"
+  blog.default_extension = ".markdown"
 
-  #blog.tag_template = "tag.html"
-  #blog.calendar_template = "calendar.html"
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
-#end
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
+end
 
 # page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change

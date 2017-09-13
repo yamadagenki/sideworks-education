@@ -45,6 +45,29 @@
   </div>
 </section>
 
+<section id="posts" class="works">
+  <div class="container">
+    <div class="section-heading">
+      <h1 class="title wow fadeInDown animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">レベル別学習紹介</h1>
+      <p class="wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        なんとなく使えるけど、良くわかってない。そんなものありませんか？徐が教えていく中で「これくらい知ってて欲しい」ということを徒然に記事に書きました。良ければ読んで下さい。
+      </p>
+    </div>
+    <div class="row">
+      <% page_articles.each_with_index do |article, i| %>
+        <div class="col-sm-4 col-xs-12">
+          <% link_to article.path, relative: true do %>
+            <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+              <h3><%= article.title %></h3>
+              <p class="mt10 mb20"><%= truncate(article.data.try!(:description), length: 40) if article.data.try!(:description) %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
 <section id="works" class="works">
   <div class="container">
     <div class="section-heading">
@@ -57,14 +80,14 @@
       <div class="col-sm-4 col-xs-12">
         <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
           <h3>Web初級コース</h3>
-          <p class="mt10 mb20">大規模開発を想定したHTML・CSS学習から，Webページが表示されるまでの仕組みなど基礎となる部分を勉強します．基礎的なWebサイトが開発できるようになります．</p>
+          <p class="mt10 mb20 h130">大規模開発を想定したHTML・CSS学習から，Webページが表示されるまでの仕組みなど基礎となる部分を勉強します．基礎的なWebサイトが開発できるようになります．</p>
           <p>学習期間：約1ヶ月</p>
         </div>
       </div>
       <div class="col-sm-4 col-xs-12">
         <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
           <h3>Web中級コース</h3>
-          <p class="mt10 mb20">
+          <p class="mt10 mb20 h130">
             RubyOnRailsを軸に，インフラ構築や，バックエンド開発，Javascript・Sassを用いたフロントエンド開発まで勉強します．標準的なWebサービスが開発できるようになります．
           </p>
           <p>学習期間：約5ヶ月</p>
@@ -73,7 +96,7 @@
       <div class="col-sm-4 col-xs-12">
         <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
           <h3>Web上級コース</h3>
-          <p class="mt10 mb20">
+          <p class="mt10 mb20 h130">
             指定された要件を満たす，任意のシステムを，企画から開発・運用まで１人でゼロから作成していきます．サービスを開発・運用する上で必要な知識が総合的に得られます．
           </p>
           <p>学習期間：約6ヶ月</p>
@@ -84,7 +107,7 @@
 </section>
 
 <section id="service">
-  <div class="container">
+  <div class="container mt40">
     <div class="section-heading">
       <h2 class="title wow fadeInDown" data-wow-delay=".3s">カリキュラム例</h2>
       <p class="wow fadeInDown" data-wow-delay=".5s">
