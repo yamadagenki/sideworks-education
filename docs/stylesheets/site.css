@@ -9760,7 +9760,7 @@ a:hover {
   background: url("../images/slider.jpg") no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
-  padding: 230px 0;
+  padding: 230px 0 180px;
   color: #fff;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
