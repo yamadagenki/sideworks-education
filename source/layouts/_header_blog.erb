@@ -1,0 +1,42 @@
+<header id="top-bar" class="navbar-fixed-top animated-header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="navbar-brand">
+        <a href="/sideworks-education" >
+          <img src="/sideworks-education/images/logo.svg" alt="" height="30" width="auto">
+        </a>
+      </div>
+    </div>
+    <nav class="collapse navbar-collapse navbar-right" role="navigation">
+      <div class="main-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="<%= config[:http_prefix] %>#hero-area">ホーム</a>
+          </li>
+          <li>
+            <a href="<%= config[:http_prefix] %>#about">講師紹介</a>
+          </li>
+          <li>
+            <a href="<%= config[:http_prefix] %>#posts">レベル別学習紹介</a>
+          </li>
+          <li>
+            <a href="<%= config[:http_prefix] %>#works">コース紹介</a>
+          </li>
+          <li>
+            <a href="<%= config[:http_prefix] %>#service">カリキュラム例</a>
+          </li>
+          <li>
+            <a href="#call-to-action" class="animated smooth-scroll" data-wow-delay=".9s" data-section="#call-to-action">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -30,11 +30,12 @@
     </script>
   </head>
   <body>
-    <%= partial 'layouts/header' %>
+    <%= partial 'layouts/header_blog' %>
     <div class="container">
-      <h1 class="mb20"><%= current_page.data.title %></h1>
+      <h1 class="mb40 mt30"><%= current_page.data.title %></h1>
       <%= yield %>
     </div>
+    <%= partial 'layouts/inquiry' %>
     <%= partial 'layouts/footer' %>
   </body>
 </html>
