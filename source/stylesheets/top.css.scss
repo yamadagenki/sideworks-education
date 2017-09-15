@@ -1,0 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h3 {
+  color: #02bdd5;
+  font-size: 22px;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 300;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+h2 {
+  font-size: 26px;
+}
+a:hover {
+  text-decoration: none;
+}
