@@ -26,3 +26,6 @@ h2 {
 
 a:hover {
   text-decoration: none; }
+
+p {
+  margin: 0 0 10px; }
