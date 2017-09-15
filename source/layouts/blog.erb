@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="locale" content="ja_JP">
-    <meta name="url" content="https://yamadagenki.github.io/sideworks-education/">
+    <meta name="url" content="https://yamadagenki.github.io<%= current_page.url %>">
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sideworks Education</title>
-    <meta name="description" content='本気で"プロ"のエンジニアを目指すためのプログラミングスクール．'>
-    <meta name="keywords" content="プログラミング,スクール,教育,初心者,エンジニア">
-    <%= favicon_tag 'https://yamadagenki.github.io/xushengbo/images/favicon.png' %>
+    <title><%= current_page.data.title %> | <%= data.settings.site %></title>
+    <meta name="description" content='<%= data.settings.description %>'>
+    <meta name="keywords" content="<%= data.settings.description %>">
+    <%= favicon_tag data.settings.favicon_url %>
 
     <meta property="og:image" content="https://yamadagenki.github.io/sideworks-education/images/sideworks_og.png">
     <meta property="og:url" content="https://yamadagenki.github.io<%= current_page.url %>">
-    <meta property="og:title" content="Sideworks Education">
-    <meta property="og:description" content='本気で"プロ"のエンジニアを目指すためのプログラミングスクール．'>
+    <meta property="og:title" content="<%= current_page.data.title %> | <%= data.settings.site %>">
+    <meta property="og:description" content='<%= data.settings.description %>'>
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@yamadagenki0607">
@@ -31,10 +31,14 @@
     </script>
   </head>
   <body>
+    <%= partial 'layouts/fb_tags' %>
     <%= partial 'layouts/header_blog' %>
-    <div class="container">
-      <h1 class="mb40 mt30"><%= current_page.data.title %></h1>
-      <%= yield %>
+    <div class="container pb50">
+      <h1 class="mb30 mt40"><%= current_page.data.title %></h1>
+      <%= partial 'layouts/social_buttons' %>
+      <div class="mt40">
+        <%= yield %>
+      </div>
     </div>
     <%= partial 'layouts/inquiry' %>
     <%= partial 'layouts/footer' %>

@@ -11688,3 +11688,12 @@ section[id] {
     -webkit-writing-mode: horizontal-tb !important; }
   .code-description input[type="hidden"] {
     display: none; }
+
+.fb_iframe_widget > span {
+  vertical-align: baseline !important; }
+
+.twitter-tweet-button {
+  margin-right: 5px; }
+
+.line-it-button {
+  margin-right: 5px; }

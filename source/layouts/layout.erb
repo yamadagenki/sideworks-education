@@ -6,10 +6,10 @@
     <meta name="url" content="https://yamadagenki.github.io/sideworks-education/">
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Sideworks Education</title>
-    <meta name="description" content='本気で"プロ"のエンジニアを目指すためのプログラミングスクール．'>
-    <meta name="keywords" content="プログラミング,スクール,教育,初心者,エンジニア">
-    <%= favicon_tag 'https://yamadagenki.github.io/xushengbo/images/favicon.png' %>
+    <title><%= data.settings.title %> | <%= data.settings.site %></title>
+    <meta name="description" content='<%= data.settings.description %>'>
+    <meta name="keywords" content="<%= data.settings.description %>">
+    <%= favicon_tag data.settings.favicon_url %>
 
     <meta property="og:image" content="https://yamadagenki.github.io/sideworks-education/images/sideworks_og.png">
     <meta property="og:url" content="https://yamadagenki.github.io/sideworks-education/">
@@ -31,6 +31,7 @@
     </script>
   </head>
   <body>
+    <%= partial 'layouts/fb_tags' %>
     <%= partial 'layouts/header' %>
     <%= yield %>
     <%= partial 'layouts/footer' %>

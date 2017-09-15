@@ -9,3 +9,12 @@
 @import 'vendor/slider';
 @import 'trump';
 @import 'code-description';
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+.twitter-tweet-button {
+  margin-right: 5px;
+}
+.line-it-button {
+  margin-right: 5px;
+}
