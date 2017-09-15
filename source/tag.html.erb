@@ -2,7 +2,30 @@
 pageable: true
 per_page: 12
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h1 class="title wow fadeInDown animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">Articles tagged '<%= tagname %>')</h1>
+      <p class="wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        なんとなく使えるけど、良くわかってない。そんなものありませんか？徐が教えていく中で、フリーランス・高給取りプログラマーになりたい<br/>
+        「これくらい知ってて欲しい」ということを徒然に記事に書きました。良ければ読んで下さい。
+      </p>
+    </div>
+    <div class="row">
+      <% page_articles.each_with_index do |article, i| %>
+        <div class="col-sm-4 col-xs-12">
+          <% link_to article.url do %>
+            <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+              <h3><%= article.title %></h3>
+              <p class="mt10 mb20"><%= truncate(article.data.try!(:description), length: 40) if article.data.try!(:description) %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -11,12 +34,6 @@ per_page: 12
     <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
 <% end %>
-
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
 
 <% if paginate %>
   <% if next_page %>
