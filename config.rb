@@ -10,6 +10,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 activate :autoprefixer
 activate :sprockets
+activate :syntax
 set :relative_links, true
 
 # With alternative layout

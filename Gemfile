@@ -13,6 +13,7 @@ gem 'middleman', "~> 4.1"
 gem 'middleman-sprockets'
 gem 'middleman-autoprefixer'
 gem 'middleman-blog'
+gem 'middleman-syntax'
 
 # gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 

@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="locale" content="ja_JP">
+    <meta name="url" content="https://yamadagenki.github.io/sideworks-education/posts/2017/09/19.html">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Railsのルーティングに関する理解 | Sideworks Education</title>
+    <meta name="description" content='稼げる"プロ"のエンジニアを目指すためのプログラミングスクール．'>
+    <meta name="keywords" content="Rilasを教えていて，ルーティング全然わかってないなと感じます．それはRailsの知識だけではありません．">
+    <link href="https://yamadagenki.github.io/xushengbo/images/favicon.png" rel="icon" type="image/png" />
+
+    <meta property="og:image" content="https://yamadagenki.github.io/sideworks-education/images/sideworks_og.png">
+    <meta property="og:url" content="https://yamadagenki.github.io/sideworks-education/posts/2017/09/19.html">
+    <meta property="og:title" content="Railsのルーティングに関する理解 | Sideworks Education">
+    <meta property="og:description" content='Rilasを教えていて，ルーティング全然わかってないなと感じます．それはRailsの知識だけではありません．'>
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yamadagenki0607">
+    <link href="/sideworks-education/stylesheets/site.css" rel="stylesheet" />
+    <link href="/sideworks-education/stylesheets/blog.css" rel="stylesheet" />
+    <script src="/sideworks-education/javascripts/all.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-102194032-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10&appId=1824588817586188";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <header id="top-bar" class="navbar-fixed-top animated-header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="navbar-brand">
+        <a href="/sideworks-education" >
+          <img src="/sideworks-education/images/logo.svg" alt="" height="30" width="auto">
+        </a>
+      </div>
+    </div>
+    <nav class="collapse navbar-collapse navbar-right" role="navigation">
+      <div class="main-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/sideworks-education#hero-area">ホーム</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#about">講師紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#posts">レベル別学習紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#works">コース紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#service">カリキュラム例</a>
+          </li>
+          <li>
+            <a href="#call-to-action" class="animated smooth-scroll" data-wow-delay=".9s" data-section="#call-to-action">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <div class="container pb50 blog">
+      <h1 class="mb10 mt40">Railsのルーティングに関する理解</h1>
+      <p class="mb30 date">2017年09月19日</p>
+      <div class="fb-share-button mr5" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">シェア</a></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="yamadagenki0607" data-hashtags="sideworks">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="line-it-button" data-lang="ja" data-type="share-a" data-url="https://yamadagenki.github.io/sideworks-education/posts/2017/09/19.html" style="display: none;"></div>
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+      <div class="mt40">
+        <p>こんにちは，徐です．<br />
+今日から色々書いていきます．</p>
+
+<p>Rilasを教えていて，ルーティング全然わかってないなと感じます．
+それは，"Railsの仕組みをわかってないな"と言うのももちろんありますが，<br />
+<strong>通信</strong>をしていくわけなので，ネットワークに関する知識ももちろん必要になります．</p>
+
+<p>Railsの教科書や，プログラミングスクールでは，そういった低レイヤーのことはほとんど教えてもらえないので，<br />
+<strong>ルーティング</strong>を理解するためにも更に勉強が必要です．</p>
+
+<h2 id="section">初級編</h2>
+<p>Railsを触ったことある人ならば，まずはScaffoldから習い始めるんじゃないかと思います．<br />
+Scaffoldの説明は，<a href="http://www.rubylife.jp/rails/scaffold/index1.html">他の記事</a>に任せることにします．</p>
+
+<p>Scaffoldでは，</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="n">resources</span> <span class="ss">:hogehoge</span>
+</code></pre></div>
+<p>と，追加されるのではないでしょうか．</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP動詞</th>
+      <th>パス</th>
+      <th>コントローラ#アクション</th>
+      <th>目的</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/hogehoge</td>
+      <td>hogehoge#index</td>
+      <td>すべてのhogehogeの一覧を表示</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/hogehoge/new</td>
+      <td>hogehoge#new</td>
+      <td>hogehogeを1つ作成するためのHTMLフォームを返す</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/hogehoge</td>
+      <td>hogehoge#create</td>
+      <td>hogehogeを1つ作成する</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/hogehoge/:id</td>
+      <td>hogehoge#show</td>
+      <td>特定のhogehogeを表示する</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/hogehoge/:id/edit</td>
+      <td>hogehoge#edit</td>
+      <td>hogehoge編集用のHTMLフォームを1つ返す</td>
+    </tr>
+    <tr>
+      <td>PATCH/PUT</td>
+      <td>/hogehoge/:id</td>
+      <td>hogehoge#update</td>
+      <td>特定のhogehogeを更新する</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/hogehoge/:id</td>
+      <td>hogehoge#destroy</td>
+      <td>特定のhogehogeを削除する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>こういうのが一通り生成されます．</p>
+
+<h2 id="section-1">中級編</h2>
+<p>Scaffoldを使ってなんとなくできたら，マニュアルで設定していくと思います．</p>
+
+<p>例えば下記のようなものです．</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="n">get</span> <span class="n">hogehoge</span><span class="o">/</span><span class="ss">:id</span><span class="s1">', to: '</span><span class="n">hogehoge</span><span class="c1">#show'</span>
+</code></pre></div>
+<p>これは，resourcesで生成されるもの以外，URLを独自でカスタマイズするときによく使います．<br />
+これには，実は様々なオプションがあるのですが，また別の機会に解説していきたいと思います．</p>
+
+<p>また，resoucesでは，上記のような7つのルーティングが生成されますが，<br />
+実際の開発では「不必要なものは書かない」というのが大事になります．<br />
+これは，後から入る開発者が，「これ使ってるの？使ってないの？」と混乱しないようにするためです．</p>
+
+<p>そのため，</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="n">resources</span> <span class="ss">:hogehoge</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:index</span><span class="p">,</span> <span class="ss">:show</span><span class="p">]</span>
+</code></pre></div>
+<p>と言うように，アクションを限定してあげたりします．</p>
+
+<h2 id="section-2">上級編</h2>
+
+<p>マニュアルで追加していくと，コードが煩雑になってくることが多々あります．
+また，管理が煩雑化しないようにする工夫もとても大事になっていきます．</p>
+
+<p>ここでは，ちょっとRailsならではの<strong>道具</strong>について紹介していきます．</p>
+
+<h3 id="scope-namespace-module">scope, namespace, module</h3>
+
+<p><a href="http://qiita.com/blueplanet/items/522cc8364f6cf189ecad">routeのmoduleとnamespaceとscopeの違い</a>を読めばわかるのですが，主にRailsのディレクトリ分割や，パスをうまくカスタマイズする時に使います．(他にもshallowオプションがあったりします)</p>
+
+<p>通常，大規模なシステムだと，<code>app/controller</code>以下に，controllerのファイルを全部置き管理することは不可能です．<br />
+これは，使う機能が管理者(admin)やユーザ(user)など役割ごとに変わってきたりするからです．</p>
+
+<p>コードの設計にも依存する部分ですので，今回は割愛します．<br />
+詳しくは<a href="http://amzn.to/2x9VFTz">エリック・エヴァンスのドメイン駆動設計</a>や<a href="http://amzn.to/2xdz3PP">ユースケース駆動開発実践ガイド</a>を読んでみるのが良いと思います．</p>
+
+<h3 id="member-collection">member, collection</h3>
+
+<p>通常，member, collectionは本には使用例が書いてありますが，実践している人は多く見かけません．<br />
+下記の記事が参考になるかなと思います．</p>
+
+<ul>
+  <li><a href="https://techracho.bpsinc.jp/baba/2014_03_03/15619">collectionとmember</a>
+    <ul>
+      <li>（※「collectionとmember」というところを読む）</li>
+    </ul>
+  </li>
+  <li>http://qiita.com/hiyoko/items/f1491e53450cb347606b#member</li>
+  <li>http://qiita.com/hiyoko/items/f1491e53450cb347606b#collection</li>
+</ul>
+
+<p>resourcesとうまく組み合わせると下記のようになります．</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="n">namespace</span> <span class="ss">:api</span><span class="p">,</span> <span class="ss">defaults: </span><span class="p">{</span> <span class="ss">format: :json</span> <span class="p">}</span> <span class="k">do</span>
+  <span class="n">resources</span> <span class="ss">:hogehoge</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:index</span><span class="p">]</span> <span class="k">do</span>
+    <span class="n">collection</span> <span class="k">do</span>
+      <span class="n">resources</span> <span class="ss">:fuga</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:show</span><span class="p">,</span> <span class="ss">:index</span><span class="p">]</span>
+      <span class="n">resources</span> <span class="ss">:foo</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:show</span><span class="p">,</span> <span class="ss">:index</span><span class="p">]</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>個人的に，こういうのをうまく使いこなせると，Rails熟れている感がでていいんじゃないかと思います．<br /></p>
+
+<p>もちろん，もっと他にも様々な機能があるので，<a href="https://railsguides.jp/routing.html">Rails のルーティング</a>を熟読するのをオススメします．</p>
+
+<h2 id="section-3">最上級</h2>
+<p>教えてて特に，全然ダメだなと思うことはそもそも，この辺のルート以前にhttp通信などネットワーク的なことです．</p>
+
+<ul>
+  <li>getってなに？</li>
+  <li>postとなにが違うの？</li>
+  <li>deleteやpatch，putってなに？</li>
+</ul>
+
+<p>など，そもそも通信についてあまり良くわかってないということが多々見受けられます．</p>
+
+<p>話すと長くなるので，こういう本読んで勉強するといいよ，というのを勧めておきます．</p>
+
+<h3 id="section-4">ネットワークについて</h3>
+<p><a href="http://amzn.to/2w3ywhJ">マスタリングTCP/IP 入門編</a></p>
+
+<h3 id="web">Web全般について</h3>
+<p><a href="http://amzn.to/2xdAwFP">Webを支える技術 -HTTP，URI，HTML，そしてREST</a></p>
+
+<p>特に，Webを支える技術はいい本です．
+非常に初心者にはとっかりづらく，新卒の自分にはとてもつらい本でした．
+しかし，いまになって読み返してみるととてもいい本だな，と思います．</p>
+
+<h2 id="section-5">最後に</h2>
+<p>SideWorksでは，技術をきちんと学び，身につけてもらうために，<strong>「開発しながら体で覚える」</strong>ことを大事にしています．<br /></p>
+
+<p><strong>本だけ読んでもわからん！！</strong>，<strong>もっと深く学びたい！！</strong>など，需要がありました，ぜひ下記のリンクよりお問い合わせください．<br />
+よろしくお願いします．</p>
+
+
+      </div>
+    </div>
+    <section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">やるかやらないかはあなた次第</h2>
+          <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">人生を変える1年間にしませんか？<br/>体験授業随時開催中．詳しくは下記からどうぞ．</p>
+          <a href="https://sideworks.connpass.com/" class="w180 btn btn-default btn-contact wow fadeInDown" target="_blank">体験授業を見てみる</a>
+          <a href="https://goo.gl/forms/xs4iWDJ6CxjOBY8o1"  class="w180 btn btn-default btn-contact wow fadeInDown" target="_blank">お問い合わせする</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer id="footer">
+  <div class="container">
+    <div class="col-md-8 pl0">
+      <p class="copyright">Copyright: <span>2017</span> . <a href="https://yamadagenki.github.io/xushengbo/">Shengbo.Xu</a>(Design by <a href="http://www.Themefisher.com">Themefisher</a>)</p>
+    </div>
+    <div class="col-md-4">
+      <ul class="social">
+        <li>
+          <a href="https://www.facebook.com/sideworks.life/" class="Facebook">
+            <i class="ion-social-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

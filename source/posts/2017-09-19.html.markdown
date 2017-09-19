@@ -1,0 +1,144 @@
+---
+title: Railsのルーティングに関する理解
+date: 2017-09-19
+tags: RubyOnRails
+layout: blog
+description: Rilasを教えていて，ルーティング全然わかってないなと感じます．それはRailsの知識だけではありません．
+---
+
+こんにちは，徐です．<br/>
+今日から色々書いていきます．
+
+Rilasを教えていて，ルーティング全然わかってないなと感じます．
+それは，"Railsの仕組みをわかってないな"と言うのももちろんありますが，<br/>
+**通信**をしていくわけなので，ネットワークに関する知識ももちろん必要になります．
+
+Railsの教科書や，プログラミングスクールでは，そういった低レイヤーのことはほとんど教えてもらえないので，<br/>
+**ルーティング**を理解するためにも更に勉強が必要です．
+
+
+## 初級編
+Railsを触ったことある人ならば，まずはScaffoldから習い始めるんじゃないかと思います．<br/>
+Scaffoldの説明は，[他の記事](http://www.rubylife.jp/rails/scaffold/index1.html)に任せることにします．
+
+Scaffoldでは，
+
+
+~~~ruby
+resources :hogehoge
+~~~
+
+と，追加されるのではないでしょうか．
+
+HTTP動詞    | パス               | コントローラ#アクション   | 目的
+--------- | ---------------- | -------------- | -----------------------
+GET       | /hogehoge          | hogehoge#index   | すべてのhogehogeの一覧を表示
+GET       | /hogehoge/new      | hogehoge#new     | hogehogeを1つ作成するためのHTMLフォームを返す
+POST      | /hogehoge          | hogehoge#create  | hogehogeを1つ作成する
+GET       | /hogehoge/:id      | hogehoge#show    | 特定のhogehogeを表示する
+GET       | /hogehoge/:id/edit | hogehoge#edit    | hogehoge編集用のHTMLフォームを1つ返す
+PATCH/PUT | /hogehoge/:id      | hogehoge#update  | 特定のhogehogeを更新する
+DELETE    | /hogehoge/:id      | hogehoge#destroy | 特定のhogehogeを削除する
+
+こういうのが一通り生成されます．
+
+## 中級編
+Scaffoldを使ってなんとなくできたら，マニュアルで設定していくと思います．
+
+例えば下記のようなものです．
+
+
+~~~ruby
+get hogehoge/:id', to: 'hogehoge#show'
+~~~
+
+これは，resourcesで生成されるもの以外，URLを独自でカスタマイズするときによく使います．<br/>
+これには，実は様々なオプションがあるのですが，また別の機会に解説していきたいと思います．
+
+また，resoucesでは，上記のような7つのルーティングが生成されますが，<br/>
+実際の開発では「不必要なものは書かない」というのが大事になります．<br/>
+これは，後から入る開発者が，「これ使ってるの？使ってないの？」と混乱しないようにするためです．
+
+そのため，
+
+~~~ruby
+resources :hogehoge, only: [:index, :show]
+~~~
+
+と言うように，アクションを限定してあげたりします．
+
+## 上級編
+
+マニュアルで追加していくと，コードが煩雑になってくることが多々あります．
+また，管理が煩雑化しないようにする工夫もとても大事になっていきます．
+
+ここでは，ちょっとRailsならではの**道具**について紹介していきます．
+
+### scope, namespace, module
+
+[routeのmoduleとnamespaceとscopeの違い](http://qiita.com/blueplanet/items/522cc8364f6cf189ecad)を読めばわかるのですが，主にRailsのディレクトリ分割や，パスをうまくカスタマイズする時に使います．(他にもshallowオプションがあったりします)
+
+通常，大規模なシステムだと，``app/controller``以下に，controllerのファイルを全部置き管理することは不可能です．<br/>
+これは，使う機能が管理者(admin)やユーザ(user)など役割ごとに変わってきたりするからです．
+
+コードの設計にも依存する部分ですので，今回は割愛します．<br/>
+詳しくは[エリック・エヴァンスのドメイン駆動設計](http://amzn.to/2x9VFTz)や[ユースケース駆動開発実践ガイド](http://amzn.to/2xdz3PP)を読んでみるのが良いと思います．
+
+
+### member, collection
+
+通常，member, collectionは本には使用例が書いてありますが，実践している人は多く見かけません．<br/>
+下記の記事が参考になるかなと思います．
+
+
+- [collectionとmember](https://techracho.bpsinc.jp/baba/2014_03_03/15619)
+  - （※「collectionとmember」というところを読む）
+- http://qiita.com/hiyoko/items/f1491e53450cb347606b#member
+- http://qiita.com/hiyoko/items/f1491e53450cb347606b#collection
+
+resourcesとうまく組み合わせると下記のようになります．
+
+
+~~~ruby
+namespace :api, defaults: { format: :json } do
+  resources :hogehoge, only: [:index] do
+    collection do
+      resources :fuga, only: [:show, :index]
+      resources :foo, only: [:show, :index]
+    end
+  end
+end
+~~~
+
+個人的に，こういうのをうまく使いこなせると，Rails熟れている感がでていいんじゃないかと思います．<br/>
+
+もちろん，もっと他にも様々な機能があるので，[Rails のルーティング](https://railsguides.jp/routing.html)を熟読するのをオススメします．
+
+## 最上級
+教えてて特に，全然ダメだなと思うことはそもそも，この辺のルート以前にhttp通信などネットワーク的なことです．
+
+- getってなに？
+- postとなにが違うの？
+- deleteやpatch，putってなに？
+
+など，そもそも通信についてあまり良くわかってないということが多々見受けられます．
+
+話すと長くなるので，こういう本読んで勉強するといいよ，というのを勧めておきます．
+
+### ネットワークについて
+[マスタリングTCP/IP 入門編](http://amzn.to/2w3ywhJ)
+
+### Web全般について
+[Webを支える技術 -HTTP，URI，HTML，そしてREST](http://amzn.to/2xdAwFP)
+
+特に，Webを支える技術はいい本です．
+非常に初心者にはとっかりづらく，新卒の自分にはとてもつらい本でした．
+しかし，いまになって読み返してみるととてもいい本だな，と思います．
+
+
+## 最後に
+SideWorksでは，技術をきちんと学び，身につけてもらうために，**「開発しながら体で覚える」**ことを大事にしています．<br/>
+
+**本だけ読んでもわからん！！**，**もっと深く学びたい！！**など，需要がありました，ぜひ下記のリンクよりお問い合わせください．<br/>
+よろしくお願いします．
+
