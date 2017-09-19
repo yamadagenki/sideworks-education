@@ -11430,6 +11430,9 @@ px      68    160    252    344    436    */
 .c-white {
   color: white; }
 
+.c-normal {
+  color: #727272; }
+
 section[id] {
   margin-top: -100px;
   padding-top: 100px; }
