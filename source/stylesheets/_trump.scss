@@ -38,11 +38,21 @@ $padding-base: 5;
   width: 180px;
 }
 
+@for $i from 10 through 24 {
+  .fs#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
 .pl0 {
   padding-left: 0;
 }
 .mt0 {
   margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
 }
 
 .ta-c {

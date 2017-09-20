@@ -6,11 +6,11 @@
           <!-- Slider -->
           <section class="cd-intro">
             <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
-              <span>本気で"プロ"のエンジニアになる</span><br>
+              <span>本気で稼げる"プロ"のエンジニアになる</span><br>
             </h1>
           </section>
           <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
-            "プロ"のエンジニアから，"プロ"の技を習い，"プロ"のエンジニアを目指すプログラミング教室です．<br/>
+            "プロ"のエンジニアから，"プロ"の技を習い，"プロ"の<b>稼げるエンジニア</b>を目指すプログラミングスクールです．<br/>
             本気で勉強したい人のみご参加ください．
           </h2>
           <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#about" data-section="#about">講師紹介</a>
@@ -60,7 +60,10 @@
           <% link_to article.url do %>
             <div class="p20 grid-box wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
               <h3><%= article.title %></h3>
-              <p class="c-normal mt10"><%= article.data.date.strftime('%Y年%m月%d日') %></p>
+              <p class="c-normal mt10 mb0"><%= article.data.date.strftime('%Y年%m月%d日') %></p>
+              <p class="c-normal mt0 fs12">
+                <%= article.data.tags %>
+              </p>
               <p class="mt10 mb20"><%= truncate(article.data.try!(:description), length: 40) if article.data.try!(:description) %></p>
             </div>
           <% end %>

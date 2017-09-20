@@ -35,7 +35,13 @@
     <%= partial 'layouts/header_blog' %>
     <div class="container pb50 blog">
       <h1 class="mb10 mt40"><%= current_page.data.title %></h1>
-      <p class="mb30 date"><%= current_page.data.date.strftime('%Y年%m月%d日') %></p>
+      <p class="mb5 date"><%= current_page.data.date.strftime('%Y年%m月%d日') %></p>
+      <p class="mb30 mt5">
+        <% current_page.tags.each_with_index do |tag, i| %>
+          <%= link_to(tag, tag_path(tag)) %>
+          <%= '，' unless i == current_page.tags.size - 1 %>
+        <% end %>
+      </p>
       <%= partial 'layouts/social_buttons' %>
       <div class="mt40">
         <%= yield %>
