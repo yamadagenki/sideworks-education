@@ -23,7 +23,7 @@ HTML・CSSと言うと，初心者が最初に習うことです．<br/>
 
 初級編は大好きなdotinstallにおまかせします．
 
-https://dotinstall.com/lessons/basic_css_v3
+[https://dotinstall.com/lessons/basic_css_v3](https://dotinstall.com/lessons/basic_css_v3)
 
 補足するとしたら，
 
@@ -34,15 +34,15 @@ https://dotinstall.com/lessons/basic_css_v3
 
 clearfixはこちらをご参考ください
 
-http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html
+[http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html](http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html)
 
 
 ## 中級編
 
 これも，基本的にdotinstallにおまかせします．
 
-- https://dotinstall.com/lessons/basic_css_layout
-- https://dotinstall.com/lessons/basic_cssgrid
+- [https://dotinstall.com/lessons/basic_css_layout](https://dotinstall.com/lessons/basic_css_layout)
+- [https://dotinstall.com/lessons/basic_cssgrid](https://dotinstall.com/lessons/basic_cssgrid)
 
 あと，書籍でオススメするとしたら
 
@@ -58,9 +58,9 @@ http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html
 
 そんなとき使えるのが，google chromeのデベロッパーツール
 
-- https://dotinstall.com/lessons/basic_chrome_dev_v2/28001
-- https://dotinstall.com/lessons/basic_chrome_dev_v2/28002
-- https://dotinstall.com/lessons/basic_chrome_dev_v2/28003
+- [https://dotinstall.com/lessons/basic_chrome_dev_v2/28001](https://dotinstall.com/lessons/basic_chrome_dev_v2/28001)
+- [https://dotinstall.com/lessons/basic_chrome_dev_v2/28002](https://dotinstall.com/lessons/basic_chrome_dev_v2/28002)
+- [https://dotinstall.com/lessons/basic_chrome_dev_v2/28003](https://dotinstall.com/lessons/basic_chrome_dev_v2/28003)
 
 この辺だけ見ておけば大丈夫です．
 
@@ -72,7 +72,7 @@ http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html
 
 CSSがダメなところとして，
 
-https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+[https://speakerdeck.com/dafed/managing-css-projects-with-itcss](https://speakerdeck.com/dafed/managing-css-projects-with-itcss)
 
 で上げられているように，
 
@@ -86,8 +86,8 @@ https://speakerdeck.com/dafed/managing-css-projects-with-itcss
 ということだが，要はそのままでは扱いづらく，煩雑で管理しにくいということ．
 
 そこで，
-ITCSS: https://qiita.com/makotot/items/2c3e99f15dca2789d403
-BEM: https://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884
+ITCSS: [https://qiita.com/makotot/items/2c3e99f15dca2789d403](https://qiita.com/makotot/items/2c3e99f15dca2789d403)
+BEM: [https://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884](https://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884)
 
 など，様々なcssの設計思想がある．
 
@@ -105,7 +105,7 @@ CSSは，
 
 ブラウザのバージョンごとに，どのCSSのタグが使えるかは
 
-http://caniuse.com/
+[http://caniuse.com/](http://caniuse.com/)
 
 で調べたり，[ベンダープレフィックス](http://www.htmq.com/csskihon/603.shtml)などという概念があったり，自分で管理しきれないので，[Autoprefixer](http://kojika17.com/2014/01/autoprefixer.html)などがあったり．
 
