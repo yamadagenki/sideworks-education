@@ -1,0 +1,127 @@
+---
+title: CSSを舐めてはいけない
+date: 2017-09-23
+tags: css,frontend
+layout: blog
+description:  CSSって実は書くのすごく難しいのをご存知でしょうか？
+---
+
+こんにちは，**今日はCSSって難しいですよね**，って話をしていきます．
+
+HTML・CSSと言うと，初心者が最初に習うことです．<br/>
+そして，Web界隈で働く人なら，だいたい
+**「おれ，HTML・CSS書けるよ」**
+と自信満々に言います．
+
+ちなみに，自分は，ちゃんとHTML・CSS書けると胸を貼って言えません．
+
+ので，今日は
+**どうしたら自信満々にCSS書けます！と胸を貼って言えるか**
+，ということについて書いていきます．
+
+## 初級編
+
+初級編は大好きなdotinstallにおまかせします．
+
+https://dotinstall.com/lessons/basic_css_v3
+
+補足するとしたら，
+
+基本的に
+
+- ``position: relative``と``position: absolute``はペアで使う
+- floatとclearfixはペアで使う
+
+clearfixはこちらをご参考ください
+
+http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html
+
+
+## 中級編
+
+これも，基本的にdotinstallにおまかせします．
+
+- https://dotinstall.com/lessons/basic_css_layout
+- https://dotinstall.com/lessons/basic_cssgrid
+
+あと，書籍でオススメするとしたら
+
+[HTML5/CSS3モダンコーディング フロントエンドエンジニアが教える3つの本格レイアウト](http://amzn.to/2xu3PnD)
+
+この辺がおすすめです．
+
+
+### CSSではないがこれも大事
+
+自分で組めることが大事ですが，スタイルはよく崩れます．
+そして，それを修正する必要がでてきます．
+
+そんなとき使えるのが，google chromeのデベロッパーツール
+
+- https://dotinstall.com/lessons/basic_chrome_dev_v2/28001
+- https://dotinstall.com/lessons/basic_chrome_dev_v2/28002
+- https://dotinstall.com/lessons/basic_chrome_dev_v2/28003
+
+この辺だけ見ておけば大丈夫です．
+
+
+## 上級編
+
+さて，ここまでで，最低限レイアウトは組めるようになりました．
+しかし，ここまででは小規模開発のレイアウトしか組めません．
+
+CSSがダメなところとして，
+
+https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+
+で上げられているように，
+
+- The cascade and inheritance
+- Very loose
+- Highly dependent on source order
+- Not very expressive
+- Lots of gotchas
+- Specificity
+
+ということだが，要はそのままでは扱いづらく，煩雑で管理しにくいということ．
+
+そこで，
+ITCSS: https://qiita.com/makotot/items/2c3e99f15dca2789d403
+BEM: https://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884
+
+など，様々なcssの設計思想がある．
+
+ここまでなんとなく理解・使いこなせてようやく大規模な開発ができるようになる．
+
+## 最上級
+
+CSSを書く時に考えるときは，上記で述べたことにとどまらない．
+
+[フロントエンドエンジニア養成読本](http://amzn.to/2wfk1HG)を開くと，まず一章目にブラウザとどう戦うかということについて書いてある．
+
+CSSは，
+**ブラウザによって映り方，書き方が違う**
+のだ．
+
+ブラウザのバージョンごとに，どのCSSのタグが使えるかは
+
+http://caniuse.com/
+
+で調べたり，[ベンダープレフィックス](http://www.htmq.com/csskihon/603.shtml)などという概念があったり，自分で管理しきれないので，[Autoprefixer](http://kojika17.com/2014/01/autoprefixer.html)などがあったり．
+
+とにかく，CSSを始めフロントエンドの技術は日々進化します．
+
+
+**「おれ，HTML・CSS書けるよ」**
+と胸を貼って言うためには，日々新しい技術をキャッチアップし続ける必要があるのです．
+
+## 最後に
+SideWorksでは，こうした最新技術をきちんと学び，身につけてもらうために，
+**「実際に現場で働く」**
+エンジニアが教えています．<br/>
+
+当たり前ですが
+**プロに習わないとプロにはなれません**．
+
+一緒に勉強をしたい方はぜひ下記のリンクよりお問い合わせください．<br/>
+よろしくお願いします．

@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="locale" content="ja_JP">
+    <meta name="url" content="https://yamadagenki.github.io/sideworks-education/posts/2017/09/23.html">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>CSSを舐めてはいけない | Sideworks Education</title>
+    <meta name="description" content='稼げる"プロ"のエンジニアを目指すためのプログラミングスクール．'>
+    <meta name="keywords" content="CSSって実は書くのすごく難しいのをご存知でしょうか？">
+    <link href="https://yamadagenki.github.io/xushengbo/images/favicon.png" rel="icon" type="image/png" />
+
+    <meta property="og:image" content="https://yamadagenki.github.io/sideworks-education/images/sideworks_og.png">
+    <meta property="og:url" content="https://yamadagenki.github.io/sideworks-education/posts/2017/09/23.html">
+    <meta property="og:title" content="CSSを舐めてはいけない | Sideworks Education">
+    <meta property="og:description" content='CSSって実は書くのすごく難しいのをご存知でしょうか？'>
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yamadagenki0607">
+    <link href="/sideworks-education/stylesheets/site.css" rel="stylesheet" />
+    <link href="/sideworks-education/stylesheets/blog.css" rel="stylesheet" />
+    <script src="/sideworks-education/javascripts/all.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-102194032-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10&appId=1824588817586188";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <header id="top-bar" class="navbar-fixed-top animated-header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="navbar-brand">
+        <a href="/sideworks-education" >
+          <img src="/sideworks-education/images/logo.svg" alt="" height="30" width="auto">
+        </a>
+      </div>
+    </div>
+    <nav class="collapse navbar-collapse navbar-right" role="navigation">
+      <div class="main-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/sideworks-education#hero-area">ホーム</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#about">講師紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#posts">レベル別学習紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#works">コース紹介</a>
+          </li>
+          <li>
+            <a href="/sideworks-education#service">カリキュラム例</a>
+          </li>
+          <li>
+            <a href="#call-to-action" class="animated smooth-scroll" data-wow-delay=".9s" data-section="#call-to-action">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <div class="container pb50 blog">
+      <h1 class="mb10 mt40">CSSを舐めてはいけない</h1>
+      <p class="mb5 date">2017年09月23日</p>
+      <p class="mb30 mt5">
+          <a href="/sideworks-education/tags/css.html">css</a>
+          ，
+          <a href="/sideworks-education/tags/frontend.html">frontend</a>
+          
+      </p>
+      <div class="fb-share-button mr5" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">シェア</a></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="yamadagenki0607" data-hashtags="sideworks">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="line-it-button" data-lang="ja" data-type="share-a" data-url="https://yamadagenki.github.io/sideworks-education/posts/2017/09/23.html" style="display: none;"></div>
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+      <div class="mt40">
+        <p>こんにちは，<strong>今日はCSSって難しいですよね</strong>，って話をしていきます．</p>
+
+<p>HTML・CSSと言うと，初心者が最初に習うことです．<br />
+そして，Web界隈で働く人なら，だいたい
+<strong>「おれ，HTML・CSS書けるよ」</strong>
+と自信満々に言います．</p>
+
+<p>ちなみに，自分は，ちゃんとHTML・CSS書けると胸を貼って言えません．</p>
+
+<p>ので，今日は
+<strong>どうしたら自信満々にCSS書けます！と胸を貼って言えるか</strong>
+，ということについて書いていきます．</p>
+
+<h2 id="section">初級編</h2>
+
+<p>初級編は大好きなdotinstallにおまかせします．</p>
+
+<p>https://dotinstall.com/lessons/basic_css_v3</p>
+
+<p>補足するとしたら，</p>
+
+<p>基本的に</p>
+
+<ul>
+  <li><code>position: relative</code>と<code>position: absolute</code>はペアで使う</li>
+  <li>floatとclearfixはペアで使う</li>
+</ul>
+
+<p>clearfixはこちらをご参考ください</p>
+
+<p>http://coliss.com/articles/build-websites/operation/css/css-latest-clearfix.html</p>
+
+<h2 id="section-1">中級編</h2>
+
+<p>これも，基本的にdotinstallにおまかせします．</p>
+
+<ul>
+  <li>https://dotinstall.com/lessons/basic_css_layout</li>
+  <li>https://dotinstall.com/lessons/basic_cssgrid</li>
+</ul>
+
+<p>あと，書籍でオススメするとしたら</p>
+
+<p><a href="http://amzn.to/2xu3PnD">HTML5/CSS3モダンコーディング フロントエンドエンジニアが教える3つの本格レイアウト</a></p>
+
+<p>この辺がおすすめです．</p>
+
+<h3 id="css">CSSではないがこれも大事</h3>
+
+<p>自分で組めることが大事ですが，スタイルはよく崩れます．
+そして，それを修正する必要がでてきます．</p>
+
+<p>そんなとき使えるのが，google chromeのデベロッパーツール</p>
+
+<ul>
+  <li>https://dotinstall.com/lessons/basic_chrome_dev_v2/28001</li>
+  <li>https://dotinstall.com/lessons/basic_chrome_dev_v2/28002</li>
+  <li>https://dotinstall.com/lessons/basic_chrome_dev_v2/28003</li>
+</ul>
+
+<p>この辺だけ見ておけば大丈夫です．</p>
+
+<h2 id="section-2">上級編</h2>
+
+<p>さて，ここまでで，最低限レイアウトは組めるようになりました．
+しかし，ここまででは小規模開発のレイアウトしか組めません．</p>
+
+<p>CSSがダメなところとして，</p>
+
+<p>https://speakerdeck.com/dafed/managing-css-projects-with-itcss</p>
+
+<p>で上げられているように，</p>
+
+<ul>
+  <li>The cascade and inheritance</li>
+  <li>Very loose</li>
+  <li>Highly dependent on source order</li>
+  <li>Not very expressive</li>
+  <li>Lots of gotchas</li>
+  <li>Specificity</li>
+</ul>
+
+<p>ということだが，要はそのままでは扱いづらく，煩雑で管理しにくいということ．</p>
+
+<p>そこで，
+ITCSS: https://qiita.com/makotot/items/2c3e99f15dca2789d403
+BEM: https://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884</p>
+
+<p>など，様々なcssの設計思想がある．</p>
+
+<p>ここまでなんとなく理解・使いこなせてようやく大規模な開発ができるようになる．</p>
+
+<h2 id="section-3">最上級</h2>
+
+<p>CSSを書く時に考えるときは，上記で述べたことにとどまらない．</p>
+
+<p><a href="http://amzn.to/2wfk1HG">フロントエンドエンジニア養成読本</a>を開くと，まず一章目にブラウザとどう戦うかということについて書いてある．</p>
+
+<p>CSSは，
+<strong>ブラウザによって映り方，書き方が違う</strong>
+のだ．</p>
+
+<p>ブラウザのバージョンごとに，どのCSSのタグが使えるかは</p>
+
+<p>http://caniuse.com/</p>
+
+<p>で調べたり，<a href="http://www.htmq.com/csskihon/603.shtml">ベンダープレフィックス</a>などという概念があったり，自分で管理しきれないので，<a href="http://kojika17.com/2014/01/autoprefixer.html">Autoprefixer</a>などがあったり．</p>
+
+<p>とにかく，CSSを始めフロントエンドの技術は日々進化します．</p>
+
+<p><strong>「おれ，HTML・CSS書けるよ」</strong>
+と胸を貼って言うためには，日々新しい技術をキャッチアップし続ける必要があるのです．</p>
+
+<h2 id="section-4">最後に</h2>
+<p>SideWorksでは，こうした最新技術をきちんと学び，身につけてもらうために，
+<strong>「実際に現場で働く」</strong>
+エンジニアが教えています．<br /></p>
+
+<p>当たり前ですが
+<strong>プロに習わないとプロにはなれません</strong>．</p>
+
+<p>一緒に勉強をしたい方はぜひ下記のリンクよりお問い合わせください．<br />
+よろしくお願いします．</p>
+
+      </div>
+    </div>
+    <section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">やるかやらないかはあなた次第</h2>
+          <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">人生を変える1年間にしませんか？<br/>体験授業随時開催中．詳しくは下記からどうぞ．</p>
+          <a href="https://sideworks.connpass.com/" class="w180 btn btn-default btn-contact wow fadeInDown" target="_blank">体験授業を見てみる</a>
+          <a href="https://goo.gl/forms/xs4iWDJ6CxjOBY8o1"  class="w180 btn btn-default btn-contact wow fadeInDown" target="_blank">お問い合わせする</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer id="footer">
+  <div class="container">
+    <div class="col-md-8 pl0">
+      <p class="copyright">Copyright: <span>2017</span> . <a href="https://yamadagenki.github.io/xushengbo/">Shengbo.Xu</a>(Design by <a href="http://www.Themefisher.com">Themefisher</a>)</p>
+    </div>
+    <div class="col-md-4">
+      <ul class="social">
+        <li>
+          <a href="https://www.facebook.com/sideworks.life/" class="Facebook">
+            <i class="ion-social-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
