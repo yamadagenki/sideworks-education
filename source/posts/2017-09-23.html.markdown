@@ -1,5 +1,5 @@
 ---
-title: CSSを舐めてはいけない
+title: CSSを舐めてはいけない〜本当は怖いCSS〜
 date: 2017-09-23
 tags: css,frontend
 layout: blog
