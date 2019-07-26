@@ -22,7 +22,6 @@
     -o-transition: visibility 500ms, opacity 500ms, -o-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
     -ms-transition: visibility 500ms, opacity 500ms, -ms-transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
     transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99); }
-
   .navbar-nav .dropdown:hover div.dropdown-menu,
   .navbar-nav .dropdown.megamenu:hover div.dropdown-menu {
     opacity: 1;
@@ -33,9 +32,9 @@
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); }
-
   .navbar-nav .dropdown-backdrop {
     visibility: hidden; } }
+
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
 		Outer margins: 28px.
@@ -53,32 +52,23 @@ px      68    160    252    */
 @media only screen and (max-width: 767px) {
   .title {
     font-size: 40px; }
-
   .navbar-header .navbar-brand a {
     padding: 6px 8px; }
-
   #hero-area {
     padding: 140px 0;
     margin-top: 0 !important; }
-
   #hero-area .btn {
     margin-top: 8px; }
-
   #about .block {
     padding: 0; }
-
   figure .buttons {
     left: 16%; }
-
   #feature .media {
     margin: 0px 0px 35px; }
-
   #footer .copyright {
     text-align: center; }
-
   #footer .social {
     text-align: center; }
-
   .dropdown-menu > ul > li > a {
     display: block;
     font-size: 14px;
@@ -88,7 +78,6 @@ px      68    160    252    */
     padding: 15px;
     color: #333;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
   .dropdown-menu > ul {
     list-style: none;
     padding: 0 15px;
@@ -99,15 +88,12 @@ px      68    160    252    */
     background: #fff;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
-
   .navbar-collapse {
     background: #333333; }
-
   #top-bar .main-menu li > a {
     color: #fff;
     padding: 21px 10px;
     background: transparent; }
-
   #top-bar .dropdown-menu > ul {
     list-style: none;
     padding: 0 15px;
@@ -118,7 +104,6 @@ px      68    160    252    */
     background: #fff;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
-
   #top-bar .dropdown-menu > ul > li > a {
     display: block;
     font-size: 14px;
@@ -128,6 +113,7 @@ px      68    160    252    */
     padding: 15px;
     color: #333;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
+
 /*		Wide Mobile Layout: 480px.
 		Gutters: 24px.
 		Outer margins: 22px.
