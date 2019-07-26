@@ -73,7 +73,7 @@ configure :build do
   set :js_dir, 'javascripts'
   set :images_dir, 'images'
 
-  set :http_prefix, '/sideworks-education'
+  set :http_prefix, ''
 
   after_build do
     system 'rm -rf docs'
